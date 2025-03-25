@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib.colors import ListedColormap
 
-#Definition des gens
+#Definition des etats
 SUSCEPTIBLE = 0
 INFECTED = 1
 RECOVERED = 2
 
-# Parametre
+# Parametres
 grid_size = 20  #taille population
 infection_rate = 0.3
 recovery_rate = 0.2
