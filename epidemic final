@@ -1,0 +1,74 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib.colors import ListedColormap
+
+#Definition des gens
+SUSCEPTIBLE = 0
+INFECTED = 1
+RECOVERED = 2
+
+# Parametre
+grid_size = 20  #taille population
+infection_rate = 0.3
+recovery_rate = 0.2
+waning_immunity = 0.1
+neigh = 1
+
+def neighborhood2(cell, x, y, neigh):
+    """Trouver les voisinages"""
+    lres = []
+    for i in range(max(0, x - neigh), min(np.shape(cell)[0], x + neigh + 1)):
+        for j in range(max(0, y - neigh), min(np.shape(cell)[1], y + neigh + 1)):
+            if (i != x or j != y) and cell[i, j] != 0:
+                lres.append((i, j))
+    return lres
+
+def generate_population(grid_size):
+    """creer la population avec 5 infectes"""
+    grid = np.full((grid_size, grid_size), SUSCEPTIBLE)
+    infected_positions = np.random.choice(grid_size * grid_size, 5, replace=False)
+    for pos in infected_positions:
+        x, y = divmod(pos, grid_size)
+        grid[x, y] = INFECTED
+    return grid
+
+# fonction lance (comme schelling)
+def update(frame):
+    global grid
+    new_grid = np.copy(grid)
+
+    for x in range(grid_size):
+        for y in range(grid_size):
+            if grid[x, y] == SUSCEPTIBLE:
+                # verifier si le voisinage est infecté
+                neighbors = neighborhood2(grid, x, y, neigh)
+                for nx, ny in neighbors:
+                    if grid[nx, ny] == INFECTED and np.random.rand() < infection_rate:
+                        new_grid[x, y] = INFECTED
+                        break
+            elif grid[x, y] == INFECTED:
+                if np.random.rand() < recovery_rate:
+                    new_grid[x, y] = RECOVERED
+            elif grid[x, y] == RECOVERED:
+                if np.random.rand() < waning_immunity:
+                    new_grid[x, y] = SUSCEPTIBLE
+
+    grid = new_grid
+    mat.set_data(grid)
+    return [mat]
+
+# creer la matrice initial
+grid = generate_population(grid_size)
+
+# Définition des couleurs par état
+cmap = ListedColormap(["white", "red", "gray"])  # Susceptible (blanc), Infected (rouge), Recovered (gris)
+
+# Paramètres graphiques
+fig, ax = plt.subplots()
+mat = ax.matshow(grid, cmap=cmap, vmin=0, vmax=2)  # Cố định khoảng giá trị để khớp màu
+
+# lancer l'animation
+ani = animation.FuncAnimation(fig, update, frames=100, interval=200)
+
+plt.show()
