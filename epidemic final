@@ -1,74 +1,100 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
-from matplotlib.colors import ListedColormap
+import matplotlib.colors as mcolors
+import tkinter as tk
+from tkinter import ttk
 
-#Definition des etats
+# Definition les etats
 SUSCEPTIBLE = 0
 INFECTED = 1
 RECOVERED = 2
 
-# Parametres
-grid_size = 20  #taille population
-infection_rate = 0.3
-recovery_rate = 0.2
-waning_immunity = 0.1
-neigh = 1
+grid_size = 20  # Taille de population
+neigh = 1 
 
-def neighborhood2(cell, x, y, neigh):
-    """Trouver les voisinages"""
-    lres = []
-    for i in range(max(0, x - neigh), min(np.shape(cell)[0], x + neigh + 1)):
-        for j in range(max(0, y - neigh), min(np.shape(cell)[1], y + neigh + 1)):
-            if (i != x or j != y) and cell[i, j] != 0:
-                lres.append((i, j))
-    return lres
+def neighborhood(cell_x, cell_y, neigh):
+    """Trouver les voisinages'"""
+    neighbors = []
+    for dx in range(-neigh, neigh + 1):
+        for dy in range(-neigh, neigh + 1):
+            if (dx != 0 or dy != 0) and (0 <= cell_x + dx < grid_size) and (0 <= cell_y + dy < grid_size):
+                neighbors.append((cell_x + dx, cell_y + dy))
+    return neighbors
 
-def generate_population(grid_size):
-    """creer la population avec 5 infectes"""
-    grid = np.full((grid_size, grid_size), SUSCEPTIBLE)
-    infected_positions = np.random.choice(grid_size * grid_size, 5, replace=False)
-    for pos in infected_positions:
-        x, y = divmod(pos, grid_size)
-        grid[x, y] = INFECTED
-    return grid
+# Creer la population
+grid = np.full((grid_size, grid_size), SUSCEPTIBLE)
+infected_positions = np.random.choice(grid_size * grid_size, 5, replace=False)
+for pos in infected_positions:
+    x, y = divmod(pos, grid_size)
+    grid[x, y] = INFECTED
 
-# fonction lance (comme schelling)
+# Configuration de couleur
+cmap = mcolors.ListedColormap(["white", "red", "gray"])
+norm = mcolors.BoundaryNorm([0, 1, 2, 3], cmap.N)
+
 def update(frame):
     global grid
     new_grid = np.copy(grid)
-
     for x in range(grid_size):
         for y in range(grid_size):
             if grid[x, y] == SUSCEPTIBLE:
-                # verifier si le voisinage est infecté
-                neighbors = neighborhood2(grid, x, y, neigh)
+                neighbors = neighborhood(x, y, neigh)
                 for nx, ny in neighbors:
-                    if grid[nx, ny] == INFECTED and np.random.rand() < infection_rate:
+                    if grid[nx, ny] == INFECTED and np.random.rand() < infection_rate.get():
                         new_grid[x, y] = INFECTED
                         break
             elif grid[x, y] == INFECTED:
-                if np.random.rand() < recovery_rate:
+                if np.random.rand() < recovery_rate.get():
                     new_grid[x, y] = RECOVERED
             elif grid[x, y] == RECOVERED:
-                if np.random.rand() < waning_immunity:
+                if np.random.rand() < waning_immunity.get():
                     new_grid[x, y] = SUSCEPTIBLE
-
     grid = new_grid
-    mat.set_data(grid)
-    return [mat]
+    im.set_array(grid)
+    return [im]
 
-# creer la matrice initial
-grid = generate_population(grid_size)
+# Interface Tkinter
+root = tk.Tk()
+root.title("Simulation d'épidémie")
 
-# Définition des couleurs par état
-cmap = ListedColormap(["white", "red", "gray"])  # Susceptible (blanc), Infected (rouge), Recovered (gris)
+tk.Label(root, text="Transmission rate").pack()
+infection_rate = tk.DoubleVar(value=0.1)
+infection_slider = ttk.Scale(root, from_=0, to=1, orient='horizontal', variable=infection_rate)
+infection_slider.pack()
 
-# Paramètres graphiques
+tk.Label(root, text="Recovery rate").pack()
+recovery_rate = tk.DoubleVar(value=0.2)
+recovery_slider = ttk.Scale(root, from_=0, to=1, orient='horizontal', variable=recovery_rate)
+recovery_slider.pack()
+
+tk.Label(root, text="Waning immunity rate").pack()
+waning_immunity = tk.DoubleVar(value=0.1)
+waning_slider = ttk.Scale(root, from_=0, to=1, orient='horizontal', variable=waning_immunity)
+waning_slider.pack()
+
+def start_animation():
+    ani.event_source.start()
+
+def stop_animation():
+    ani.event_source.stop()
+
+def reset_simulation():
+    global grid
+    grid.fill(SUSCEPTIBLE)
+    for pos in infected_positions:
+        x, y = divmod(pos, grid_size)
+        grid[x, y] = INFECTED
+    im.set_array(grid)
+
+ttk.Button(root, text="▶ Start", command=start_animation).pack()
+ttk.Button(root, text="⏸ Stop", command=stop_animation).pack()
+ttk.Button(root, text="🔄 Restart", command=reset_simulation).pack()
+
+# Dessiner le graph
 fig, ax = plt.subplots()
-mat = ax.matshow(grid, cmap=cmap, vmin=0, vmax=2)  # Cố định khoảng giá trị để khớp màu
-
-# lancer l'animation
-ani = animation.FuncAnimation(fig, update, frames=100, interval=200)
-
+im = ax.imshow(grid, cmap=cmap, norm=norm)
+ani = animation.FuncAnimation(fig, update, frames=100, interval=200, blit=False)
 plt.show()
+
+root.mainloop()
