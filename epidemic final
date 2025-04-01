@@ -69,8 +69,8 @@ infection_slider.pack()
 
 tk.Label(root, text="Recovery rate").pack()
 recovery_rate = tk.DoubleVar(value=0.1)
-recovery_slider = ttk.Scale(root, from_=0, to=1, orient='horizontal', variable=recovery_rate)
-recovery_slider.pack()
+#recovery_slider = ttk.Scale(root, from_=0, to=1, orient='horizontal', variable=recovery_rate)
+#recovery_slider.pack()
 
 tk.Label(root, text="Waning immunity rate").pack()
 waning_immunity = tk.DoubleVar(value=0.5)
