@@ -1,5 +1,7 @@
 import random
+import matplotlib.pyplot as plt
 import numpy as np
+
 population = 100 # le nombre d'individus
 taux_infection = 0.05 # le taux d'infection
 taux_immunité = 0.05 #taux d'immunité
@@ -52,3 +54,13 @@ def mettre_a_jour_grille(grille,lign,col):
                         
     return nouv_gril
 print(mettre_a_jour_grille(grille,10,10))
+def afficher_grille(grille,ax):
+    couleur={1: "red",2 : "green", 3: "black"}
+    couleur_grille) = np.vectorize(lambda x;couleur[x])(grille)
+    ax.imshow(couleur_grille)
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_title("Similutation de la propagation de la maladie")
+    fig,ax = plt.subplots(figsize(6,6))
+    afficher_grille(grille,ax)
+    plt.show()
