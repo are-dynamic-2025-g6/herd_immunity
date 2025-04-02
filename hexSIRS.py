@@ -1,5 +1,6 @@
 import random
 import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
 import numpy as np
 
 population = 100 # le nombre d'individus
@@ -54,13 +55,33 @@ def mettre_a_jour_grille(grille,lign,col):
                         
     return nouv_gril
 print(mettre_a_jour_grille(grille,10,10))
-def afficher_grille(grille,ax):
-    couleur={1: "red",2 : "green", 3: "black"}
-    couleur_grille) = np.vectorize(lambda x;couleur[x])(grille)
-    ax.imshow(couleur_grille)
-    ax.set_xticks([])
-    ax.set_yticks([])
-    ax.set_title("Similutation de la propagation de la maladie")
-    fig,ax = plt.subplots(figsize(6,6))
-    afficher_grille(grille,ax)
-    plt.show()
+
+
+
+# Fonction pour afficher la grille avec des couleurs personnalisées
+def plot_grid(grille, step):
+    # Définir un colormap personnalisé
+    # 1 -> bleu clair (sensible), 2 -> rouge (infecté), 3 -> vert (immunisé)
+    colors = ["lightblue", "red", "green"]
+    cmap = ListedColormap(colors)
+
+    # Affichage de la grille
+    plt.imshow(grille, cmap=cmap, interpolation='nearest')
+    plt.title(f"État de la grille à l'étape {step}")
+    #plt.colorbar(label='État (1: Sensible, 2: Infecté, 3: Immunisé)')
+    plt.draw()  # Met à jour la figure sans en créer une nouvelle
+    plt.pause(0.5)  # Pause de 0.5 secondes pour voir l'évolution
+
+# Boucle de simulation
+grille = creer_monde(10, 10, 100)
+steps = 20
+
+# Création de la figure
+plt.figure(figsize=(6, 6))
+
+for step in range(steps):
+    grille = mettre_a_jour_grille(grille, 10, 10)
+    plot_grid(grille, step)
+
+# Ferme la fenêtre après la fin de la simulation
+plt.show()
