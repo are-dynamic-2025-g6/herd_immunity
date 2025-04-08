@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import numpy as np
 
-population = 100 # le nombre d'individus
-taux_infection = 0.05 # le taux d'infection
-taux_immunité = 0.05 #taux d'immunité
+population = 400 # le nombre d'individus
+taux_infection = 0.03 # le taux d'infection
+taux_immunité = 0.09 #taux d'immunité
 taux_de_recuperation = 0.08 # taux de recuperation
 nb_infecte = 5 # nbre de personne infecté a l'etat initiale
 # 1 pour une personne sensible 2 infecté et 3 immunisé
@@ -21,8 +21,8 @@ def creer_monde(lign, col, population):
             a[x, y] = individus[i]
             i=i+1
     return a
-grille = creer_monde(10,10,100)
-print(creer_monde(10,10,100))
+grille = creer_monde(20 ,20,400)
+print(creer_monde(20,20,400))
 
 def liste_voisins(tableau,lign,col, x, y):
     voisins = [] 
@@ -54,33 +54,32 @@ def mettre_a_jour_grille(grille,lign,col):
                             break
                         
     return nouv_gril
-print(mettre_a_jour_grille(grille,10,10))
+print(mettre_a_jour_grille(grille,20,20))
 
 
 
 # Fonction pour afficher la grille avec des couleurs personnalisées
 def plot_grid(grille, step):
-    # Définir un colormap personnalisé
     # 1 -> bleu clair (sensible), 2 -> rouge (infecté), 3 -> vert (immunisé)
     colors = ["lightblue", "red", "green"]
     cmap = ListedColormap(colors)
 
     # Affichage de la grille
-    plt.imshow(grille, cmap=cmap, interpolation='nearest')
+    plt.imshow(grille, cmap=cmap)
     plt.title(f"État de la grille à l'étape {step}")
     #plt.colorbar(label='État (1: Sensible, 2: Infecté, 3: Immunisé)')
-    plt.draw()  # Met à jour la figure sans en créer une nouvelle
-    plt.pause(0.5)  # Pause de 0.5 secondes pour voir l'évolution
+    plt.draw()  # Met à jour la figure 
+    plt.pause(0.001) 
 
 # Boucle de simulation
-grille = creer_monde(10, 10, 100)
-steps = 20
+grille = creer_monde(20, 20, 400)
+steps =100
 
 # Création de la figure
 plt.figure(figsize=(6, 6))
 
 for step in range(steps):
-    grille = mettre_a_jour_grille(grille, 10, 10)
+    grille = mettre_a_jour_grille(grille, 20, 20)
     plot_grid(grille, step)
 
 # Ferme la fenêtre après la fin de la simulation
