@@ -5,7 +5,7 @@ import numpy as np
 
 population = 400 # le nombre d'individus
 taux_infection = 0.03 # le taux d'infection
-taux_immunité = 0.09 #taux d'immunité
+taux_immunité = 0.09 #taux de perte d'immunité
 taux_de_recuperation = 0.08 # taux de recuperation
 nb_infecte = 5 # nbre de personne infecté a l'etat initiale
 # 1 pour une personne sensible 2 infecté et 3 immunisé
@@ -40,10 +40,10 @@ def mettre_a_jour_grille(grille,lign,col):
     for x in range(lign):
         for y in range(col):
             if grille[x, y] == 2: 
-                if random.random() < taux_immunité:
+                if random.random() < taux_de_recuperation:
                     nouv_gril[x, y] = 3
             elif grille[x, y] == 3:
-                 if random.random() < taux_de_recuperation:
+                 if random.random() < taux_immunité:
                     nouv_gril[x, y] = 1
             elif grille[x, y] == 1 :  
                 voisins = liste_voisins(grille,lign,col,x, y)
