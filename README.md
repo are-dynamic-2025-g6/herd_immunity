@@ -43,7 +43,9 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 ## Membres du groupe
 
 - Leon Mantani
-- …  
+- Nam Khanh MAI
+- Mariama Ba
+- Awa Gueye
 
 ## Compte rendu hebdomadaire
 
