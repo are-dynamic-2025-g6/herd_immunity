@@ -164,8 +164,11 @@ Il est également nécessaire de garder en tête que dans une recherche scientif
 # Message et conseils pour les futurs étudiants :
 
 1.Dès la sélection du thème, formulez clairement par écrit ce que vous voulez accomplir dans ce projet.
+
 2.Faites des répartitions de tâches, mais assurez-vous que chaque tâche soit revue par un autre membre : évitez les travaux totalement isolés.
+
 3.Considérez le plan initial comme provisoire, non définitif.
+
 4.Choisissez votre thème non seulement pour son attrait, mais aussi en évaluant réaliste­ment vos compétences et votre temps disponible.
 
 ## Bonne chance à vous !
