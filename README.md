@@ -1,6 +1,6 @@
 # I Herd You
 
-![Image](Screenshot 2025-04-29 234123.png)
+![Image]([Screenshot 2025-04-29 234123.png](https://github.com/are-dynamic-2025-g6/herd_immunity/blob/master/Screenshot%202025-04-29%20234123.png))
 
 ## Description du projet
 
