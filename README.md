@@ -67,7 +67,7 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 
 ## Compte rendu hebdomadaire
 
-**Semaine 1 (17 février)**
+> **Semaine 1 (17 février)**
 - Objectif :
 Formation du groupe et discussion sur les thèmes potentiels.
 
@@ -84,7 +84,7 @@ Sur la base des intérêts individuels, nous avons discuté afin de converger ve
 Un modèle trop complexe rendrait la reproduction et l’analyse difficiles, compromettant ainsi la validité du projet.
 Par conséquent, nous avons décidé de limiter notre choix aux modèles compréhensibles et reproductibles, en mettant l’accent sur la reproductibilité.
 
-**Semaine 2 (10 mars)**
+> **Semaine 2 (10 mars)**
 -Activités :
 Le début du travail collaboratif était maladroit en raison de notre rencontre récente.
 Avec l'aide des conseils du professeur, nous avons choisi comme thème principal herd immunity.
@@ -93,7 +93,7 @@ Avec l'aide des conseils du professeur, nous avons choisi comme thème principal
 Comparé aux autres thèmes envisagés, le modèle de l’immunité est en lien avec des problématiques des années récentes (ex : récentes épidémies virales).
 De plus, il existe plusieurs modèles théoriques liés à ce thème, permettant un apprentissage progressif.
 
-**Semaine 3 (17 mars)**
+> **Semaine 3 (17 mars)**
 -Activités :
 Après avoir consulté plusieurs modèles liés à l’immunité acquise, nous avons constaté des variations entre eux.
 
@@ -102,7 +102,7 @@ Nous avons donc adopté la stratégie suivante :
 2.Mise en place d’un environnement collaboratif sur GitHub.
 3.Élaboration d’un planning avec des objectifs à moyen et long terme.
 
-**Semaine 4 (24 mars)**
+> **Semaine 4 (24 mars)**
 -Activités :
 Début de la reproduction individuelle des modèles attribués.
 Du fait de l'interdépendance élevée entre les modèles, nous avons mis l’accent sur :
@@ -110,7 +110,7 @@ Du fait de l'interdépendance élevée entre les modèles, nous avons mis l’ac
 des communications fréquentes,
 le partage régulier des mises à jour de codes et de documents sur GitHub.
 
-**Semaine 5 (31 mars)**
+> **Semaine 5 (31 mars)**
 -Problèmes rencontrés :
 Nous avons rencontré des difficultés pour reproduire le déplacement des agents dynamiques et l'évolution de la structure du réseau (nœuds et liens).
 Cela a entraîné un retard important par rapport au planning initial.
@@ -120,7 +120,7 @@ Solutions mises en œuvre :
 2.Priorité à l’analyse et à la compréhension théorique du modèle.
 3.Poursuite des travaux réalisables en parallèle.
 
-**Semaine 6 (7 avril)**
+> **Semaine 6 (7 avril)**
 -Activités et changement de stratégie :
 Pour rattraper le retard, nous avons adopté une approche en deux étapes :
 
@@ -129,7 +129,7 @@ Pour rattraper le retard, nous avons adopté une approche en deux étapes :
 
 Dans la seconde moitié du projet, nous avons également tenté d’adapter les modèles à des scénarios réels, comme par exemple leur application sur un campus universitaire.
 
-**Semaine 7 (Jour de la présentation)**
+> **Semaine 7 (Jour de la présentation)**
 -Résultats :
 La présentation a été un échec.
 
@@ -151,11 +151,11 @@ Manque de maîtrise des outils collaboratifs comme GitHub.
 Interruptions dues à des problèmes informatiques.
 Trop d’efforts consacrés à l’implémentation, au détriment de l’analyse critique du modèle.
 
--Bilan général :
+## -Bilan général :
 Cette expérience a souligné l'importance cruciale de partager des objectifs clairs et de construire un système de communication solide dans un travail de groupe.
 Il est également nécessaire de garder en tête que dans une recherche scientifique, il ne suffit pas de reproduire un modèle : il faut passer par le cycle reproduction → analyse → évaluation → application pour aboutir à une véritable compréhension.
 
-Message et conseils pour les futurs étudiants :
+# Message et conseils pour les futurs étudiants :
 
 1.Dès la sélection du thème, formulez clairement par écrit ce que vous voulez accomplir dans ce projet.
 2.Faites des répartitions de tâches, mais assurez-vous que chaque tâche soit revue par un autre membre : évitez les travaux totalement isolés.
