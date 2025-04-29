@@ -80,9 +80,11 @@ Lors de la première séance de travail en groupe, les quatre membres ont prése
 Sur la base des intérêts individuels, nous avons discuté afin de converger vers un modèle accepté par tous.
 
 - **Critères de sélection** :
-1.Compréhension théorique du modèle.
-2.Possibilité de reproduction en tant que programme.
-3.Adéquation avec le niveau de connaissance et de compétence actuel du groupe.
+  1.Compréhension théorique du modèle.
+  
+  2.Possibilité de reproduction en tant que programme.
+
+  3.Adéquation avec le niveau de connaissance et de compétence actuel du groupe.
 
 - **Considération scientifique** :
 Un modèle trop complexe rendrait la reproduction et l’analyse difficiles, compromettant ainsi la validité du projet.
@@ -102,9 +104,11 @@ De plus, il existe plusieurs modèles théoriques liés à ce thème, permettant
 Après avoir consulté plusieurs modèles liés à l’immunité acquise, nous avons constaté des variations entre eux.
 
 Nous avons donc adopté la stratégie suivante :
-1.Répartition : chaque membre est responsable de la reproduction d'un modèle.
-2.Mise en place d’un environnement collaboratif sur GitHub.
-3.Élaboration d’un planning avec des objectifs à moyen et long terme.
+  1.Répartition : chaque membre est responsable de la reproduction d'un modèle.
+
+  2.Mise en place d’un environnement collaboratif sur GitHub.
+  
+  3.Élaboration d’un planning avec des objectifs à moyen et long terme.
 
 > **Semaine 4 (24 mars)**
 - **Activités** :
@@ -120,16 +124,19 @@ Nous avons rencontré des difficultés pour reproduire le déplacement des agent
 Cela a entraîné un retard important par rapport au planning initial.
 
 Solutions mises en œuvre :
-1.Suspension temporaire des travaux d'implémentation.
-2.Priorité à l’analyse et à la compréhension théorique du modèle.
-3.Poursuite des travaux réalisables en parallèle.
+  1.Suspension temporaire des travaux d'implémentation.
+  
+  2.Priorité à l’analyse et à la compréhension théorique du modèle.
+  
+  3.Poursuite des travaux réalisables en parallèle.
 
 > **Semaine 6 (7 avril)**
 - **Activités et changement de stratégie** :
 Pour rattraper le retard, nous avons adopté une approche en deux étapes :
 
-1.Analyser les structures mathématiques, hypothèses et comportements des modèles de base.
-2.Reconstruire notre modèle principal (immunité acquise) à partir de ces analyses.
+  1.Analyser les structures mathématiques, hypothèses et comportements des modèles de base.
+  
+  2.Reconstruire notre modèle principal (immunité acquise) à partir de ces analyses.
 
 Dans la seconde moitié du projet, nous avons également tenté d’adapter les modèles à des scénarios réels, comme par exemple leur application sur un campus universitaire.
 
@@ -161,12 +168,12 @@ Il est également nécessaire de garder en tête que dans une recherche scientif
 
 # Message et conseils pour les futurs étudiants :
 
-1.Dès la sélection du thème, formulez clairement par écrit ce que vous voulez accomplir dans ce projet.
+  1.Dès la sélection du thème, formulez clairement par écrit ce que vous voulez accomplir dans ce projet.
 
-2.Faites des répartitions de tâches, mais assurez-vous que chaque tâche soit revue par un autre membre : évitez les travaux totalement isolés.
+  2.Faites des répartitions de tâches, mais assurez-vous que chaque tâche soit revue par un autre membre : évitez les travaux totalement isolés.
 
-3.Considérez le plan initial comme provisoire, non définitif.
+  3.Considérez le plan initial comme provisoire, non définitif.
 
-4.Choisissez votre thème non seulement pour son attrait, mais aussi en évaluant réaliste­ment vos compétences et votre temps disponible.
+  4.Choisissez votre thème non seulement pour son attrait, mais aussi en évaluant réaliste­ment vos compétences et votre temps disponible.
 
 ## Bonne chance à vous !
