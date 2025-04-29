@@ -22,15 +22,13 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 
 ## Paramètres du modèle
 
-- **Population** : `<nombre_d’individus>`  
-- **Taux de transmission** (`β`) : `<valeur>`  
-- **Durée d’infection** : `<nombre_de_tours>`  
-- **Durée d’immunité** : `<nombre_de_tours>`  
-
+- **Population** : Nombre d'agents (individus). 
 - **Taux de transmission** : Probabilité qu’une personne infectée transmette la maladie.
 - **Taux de guérison** : Probabilité qu’une personne infecté se rétablisse et acquière une immunité.
-- **Taux d’immunité décroissant** : c’est le taux de perte de cette immunité.
+- **Taux d’immunité décroissant** : C’est le taux de perte de cette immunité.
 - **Taux de vaccination** : Probabilité qu’une personne sensible se vaccine.
+- **Durée d’infection**: Nombre de tours pendant lesquels un agent reste infectieux avant de guérir.
+- **Durée d’immunité** : Nombre de tours pendant lesquels un agent conserve son immunité après guérison (ou vaccination) avant de redevenir susceptible.
 
 ## Les fonctions
 1. run_simulation_UI(N, beta, gamma, p_vaccine, infection_radius, speed, steps)
