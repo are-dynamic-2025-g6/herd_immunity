@@ -68,33 +68,33 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 ## Compte rendu hebdomadaire
 
 > **Semaine 1 (17 février)**
-- Objectif :
+- **Objectif** :
 Formation du groupe et discussion sur les thèmes potentiels.
 
-- Activités :
+- **Activités** :
 Lors de la première séance de travail en groupe, les quatre membres ont présenté chacun les thèmes ou modèles dynamiques qui les intéressaient, en s'appuyant sur ceux publiés sur <nom du site>.
 Sur la base des intérêts individuels, nous avons discuté afin de converger vers un modèle accepté par tous.
 
--Critères de sélection :
+- **Critères de sélection** :
 1.Compréhension théorique du modèle.
 2.Possibilité de reproduction en tant que programme.
 3.Adéquation avec le niveau de connaissance et de compétence actuel du groupe.
 
--Considération scientifique :
+- **Considération scientifique** :
 Un modèle trop complexe rendrait la reproduction et l’analyse difficiles, compromettant ainsi la validité du projet.
 Par conséquent, nous avons décidé de limiter notre choix aux modèles compréhensibles et reproductibles, en mettant l’accent sur la reproductibilité.
 
 > **Semaine 2 (10 mars)**
--Activités :
+- **Activités** :
 Le début du travail collaboratif était maladroit en raison de notre rencontre récente.
 Avec l'aide des conseils du professeur, nous avons choisi comme thème principal herd immunity.
 
--Raison du choix:
+- **Raison du choix**:
 Comparé aux autres thèmes envisagés, le modèle de l’immunité est en lien avec des problématiques des années récentes (ex : récentes épidémies virales).
 De plus, il existe plusieurs modèles théoriques liés à ce thème, permettant un apprentissage progressif.
 
 > **Semaine 3 (17 mars)**
--Activités :
+- **Activités** :
 Après avoir consulté plusieurs modèles liés à l’immunité acquise, nous avons constaté des variations entre eux.
 
 Nous avons donc adopté la stratégie suivante :
@@ -103,7 +103,7 @@ Nous avons donc adopté la stratégie suivante :
 3.Élaboration d’un planning avec des objectifs à moyen et long terme.
 
 > **Semaine 4 (24 mars)**
--Activités :
+- **Activités** :
 Début de la reproduction individuelle des modèles attribués.
 Du fait de l'interdépendance élevée entre les modèles, nous avons mis l’accent sur :
 
@@ -111,7 +111,7 @@ des communications fréquentes,
 le partage régulier des mises à jour de codes et de documents sur GitHub.
 
 > **Semaine 5 (31 mars)**
--Problèmes rencontrés :
+- **Problèmes rencontrés** :
 Nous avons rencontré des difficultés pour reproduire le déplacement des agents dynamiques et l'évolution de la structure du réseau (nœuds et liens).
 Cela a entraîné un retard important par rapport au planning initial.
 
@@ -121,7 +121,7 @@ Solutions mises en œuvre :
 3.Poursuite des travaux réalisables en parallèle.
 
 > **Semaine 6 (7 avril)**
--Activités et changement de stratégie :
+- **Activités et changement de stratégie** :
 Pour rattraper le retard, nous avons adopté une approche en deux étapes :
 
 1.Analyser les structures mathématiques, hypothèses et comportements des modèles de base.
@@ -130,22 +130,22 @@ Pour rattraper le retard, nous avons adopté une approche en deux étapes :
 Dans la seconde moitié du projet, nous avons également tenté d’adapter les modèles à des scénarios réels, comme par exemple leur application sur un campus universitaire.
 
 > **Semaine 7 (Jour de la présentation)**
--Résultats :
+- **Résultats** :
 La présentation a été un échec.
 
 Les principales raisons sont les suivantes :
-1. Limites de la communication de groupe
+**1. Limites de la communication de groupe**
 
 Tous les membres n'étaient pas natifs francophones, ce qui a freiné les discussions approfondies.
 L'absence d’un leadership affirmé a conduit à un flou dans les orientations du projet.
 Le respect mutuel excessif a ralenti la prise de décision collective.
 
-2. Complexité du modèle choisi
+**2. Complexité du modèle choisi**
 
 Les modèles de base étaient nombreux et indépendants.
 La coordination pour intégrer les reproductions individuelles n’a pas été suffisante.
 
-3. Raisons techniques
+**3. Raisons techniques**
 
 Manque de maîtrise des outils collaboratifs comme GitHub.
 Interruptions dues à des problèmes informatiques.
