@@ -60,7 +60,7 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 ## Liens et ressources
 
 - **Explorable “I Herd You”** : https://www.complexity-explorables.org/explorables/i-herd-you/  
-- **Documentation complémentaire** : `[(https://www.complexity-explorables.org/explorables/sirs/)]`  ,`[https://www.complexity-explorables.org/explorables/epidemonic/]`
+- **Documentation complémentaire** : https://www.complexity-explorables.org/explorables/sirs/  , https://www.complexity-explorables.org/explorables/epidemonic/
 
 ## Membres du groupe
 
