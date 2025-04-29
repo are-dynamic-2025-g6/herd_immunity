@@ -124,6 +124,7 @@ Nous avons rencontré des difficultés pour reproduire le déplacement des agent
 Cela a entraîné un retard important par rapport au planning initial.
 
 Solutions mises en œuvre :
+
   1.Suspension temporaire des travaux d'implémentation.
   
   2.Priorité à l’analyse et à la compréhension théorique du modèle.
