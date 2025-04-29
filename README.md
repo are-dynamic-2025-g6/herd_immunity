@@ -5,7 +5,7 @@
 ## Description du projet
 
 L’objectif est de comprendre la dynamique de l’immunité de groupe via le comportement collectif des individus, en s’appuyant sur l’explorable « I Herd You ».  
-> **À remplir** : le concept, l’intérêt pédagogique et scientifique.
+> **Le concept** : L’immunité collective également appelée effet de troupeau est une forme de protection indirecte qui ne s’applique qu’aux maladies contagieuses. Il se produit lorsqu’un pourcentage suffisant d’une population est devenu immunisé contre une infection, que ce soit par des infections antérieures ou par la vaccination, que l’agent pathogène transmissible ne peut pas se maintenir dans la population, sa faible incidence réduisant ainsi la probabilité d’infection pour les individus qui n’ont pas d’immunité.
 
 ## Règles de la modélisation
 
@@ -15,7 +15,10 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 - **I** : Infecté  
 - **R** : Rétabli / Immunisé (post‐infection)  
 
-> **À compléter** : les règles de transition (infection, récupération, immunité, etc.).
+> **les règles de transition** :
+>  - Une fois infectée, la personne peut transmettre la maladie à d’autres personnes sensibles.
+>  - Une personne infectée reste contagieuse pendant un certain temps, se rétablit par la suite et redevient vulnérable.
+>  - Une personne sensible peut être vacciner et devient ainsi immunisée contre la maladie.
 
 ## Paramètres du modèle
 
@@ -24,6 +27,10 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 - **Durée d’infection** : `<nombre_de_tours>`  
 - **Durée d’immunité** : `<nombre_de_tours>`  
 - **Autres paramètres** : `<…>`
+- **Taux de transmission** : Probabilité qu’une personne infectée transmette la maladie.
+- **Taux de guérison** : Probabilité qu’une personne infecté se rétablisse et acquière une immunité.
+- **Taux d’immunité décroissant** : c’est le taux de perte de cette immunité.
+- **Taux de vaccination** : Probabilité qu’une personne sensible se vaccine.
 
 ## Les fonctions
 1. run_simulation_UI(N, beta, gamma, p_vaccine, infection_radius, speed, steps)
@@ -55,15 +62,14 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 ## Liens et ressources
 
 - **Explorable “I Herd You”** : https://www.complexity-explorables.org/explorables/i-herd-you/  
-- **Documentation complémentaire** : `<URL ou référence bibliographique>`  
-- **Tutoriels / articles** : `<…>`
+- **Documentation complémentaire** : `[(https://www.complexity-explorables.org/explorables/sirs/)]`  ,`[https://www.complexity-explorables.org/explorables/epidemonic/]`
 
 ## Membres du groupe
 
-- Leon Mantani
-- Nam Khanh MAI
-- Mariama Ba
 - Awa Gueye
+- Leon Mantani
+-  Mariama Ba
+- Nam Khanh MAI
 
 ## Compte rendu hebdomadaire
 
