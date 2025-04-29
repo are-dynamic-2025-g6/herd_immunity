@@ -26,7 +26,7 @@ Nous représenterons chaque individu par une particule sur une grille ou dans un
 - **Taux de transmission** (`β`) : `<valeur>`  
 - **Durée d’infection** : `<nombre_de_tours>`  
 - **Durée d’immunité** : `<nombre_de_tours>`  
-- **Autres paramètres** : `<…>`
+
 - **Taux de transmission** : Probabilité qu’une personne infectée transmette la maladie.
 - **Taux de guérison** : Probabilité qu’une personne infecté se rétablisse et acquière une immunité.
 - **Taux d’immunité décroissant** : c’est le taux de perte de cette immunité.
